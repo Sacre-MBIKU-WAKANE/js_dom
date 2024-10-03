@@ -1,2 +1,11 @@
-const section = document.querySelector("#section");
-section.style.position = "center";
+
+const body = document.querySelector("body")
+body.style.color = ("green")
+body.style.backgroundColor = ('pink')
+
+
+
+
+
+
+
