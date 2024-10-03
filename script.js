@@ -9,7 +9,3 @@ btn.style.flexdirection= "row";
 btn.style.color="red";
 btn.style.justifycontent="center";
 btn.style.gap="2rem";
-const taskInput = document.getElementById('input-field');
-const addTaskButton = document.getElementsByClassName('btn');
-const modifyTaskButton = document.getElementsByClassName('modification');
-const deleteTaskButton = document.getElementsByClassName('delete');
