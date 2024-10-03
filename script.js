@@ -8,21 +8,7 @@ modification.forEach( function(button){
 })
 
 function modification_tasks(id){
-    let recherche = taches.find( (tache) => tache.id === id);
+    let recherche = list.find( (tache) => tache.id === id);
     recherche.paragraphe = String(prompt("votre modification"));
     displayTasks()
 }
-
-
-
-let taches = [{
-    auteur: "emmanuel",
-    id: 0,
-    paragraphe: "faire les taches menager",
-    etat : false
-},{
-    auteur: "Gad",
-    id: 1,
-    paragraphe: "bonjour tout le monde",
-    etat : false
-}]
