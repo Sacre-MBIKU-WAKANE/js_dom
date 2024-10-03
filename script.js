@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const taskList = document.getElementsByClassName('taskList');
+    const taskList = document.getElementsById('taskList');
 
     // Écoute les clics sur le bouton "Supprimer"
     taskList.addEventListener('click', (event) => {
