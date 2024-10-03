@@ -1,0 +1,15 @@
+const liste = document.querySelector("h1")
+liste.style.color = 'blue';               
+liste.style.fontSize = '2em';             
+liste.style.textAlign = 'center';       
+liste.style.marginTop = '20px';     
+const btn = document.querySelectorAll ("button")
+btn.style.display= "flex";
+btn.style.flexdirection= "row";
+btn.style.color="red";
+btn.style.justifycontent="center";
+btn.style.gap="2rem";
+const taskInput = document.getElementById('input-field');
+const addTaskButton = document.getElementsByClassName('btn');
+const modifyTaskButton = document.getElementsByClassName('modification');
+const deleteTaskButton = document.getElementsByClassName('delete');
