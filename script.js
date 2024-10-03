@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     taskList.addEventListener('click', (event) => {
         if (event.target.classList.contains('delete')) {
             const li = event.target.parentElement; // Trouver le parent <li>
-            itemList.removeChild(li); // Supprimer le <li> de la liste
+            taskList.removeChild(li); // Supprimer le <li> de la liste
         }
     });
 });
