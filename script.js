@@ -10,6 +10,7 @@ modification.forEach( function(button){
 function modification_tasks(id){
     let recherche = taches.find( (tache) => tache.id === id);
     recherche.paragraphe = String(prompt("votre modification"));
+    displayTasks()
 }
 
 
