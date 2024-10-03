@@ -35,3 +35,44 @@ ul.appendChild(li);
 let li1= document.createElement('li');
 li1.textContent='WORK';
 ul.appendChild(li1);
+
+
+const auteur = document.createElement('input');
+auteur.type = 'text';
+auteur.placeholder = 'Auteur';
+auteur.className = 'auteur';
+main.appendChild(auteur);
+
+let Taches = 0;
+
+function addTasks () {
+
+    Taches++;
+
+    Tache = {
+        id: Taches,
+        paragraphe : newInput.value,
+        auteur : auteur.value,
+        etat : false,
+    }
+
+    let li = document.createElement('li');
+    li.textContent = Tache.paragraphe + ' - ' + Tache.auteur;
+    ul.appendChild(li);
+
+    newInput.value = '';
+    auteur.value = '';
+
+
+}
+
+    li.addEventListener("click", () => {
+      Tache.etat = !Tache.etat;
+      li.classList.toggle("checked");
+    });
+
+    btn.addEventListener("click", () => {
+      addTasks();
+    });
+
+    
