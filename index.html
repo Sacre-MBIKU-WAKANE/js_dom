@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To-Do Liste</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <script src="script.js"></script>
+        <h1>Ajouter un auteur</h1>
+        <input type="text" id="authorInput" placeholder="Ajouter un auteur">
+        <button id="addAuteur">Ajouter</button>
+        <ul id="listAuteur"></ul>
+    <script>
+
+
+        const authorInput = document.getElementById('authorInput');
+        const addTaskButton = document.getElementById('addAuteur');
+        const listAuteur = document.getElementById('listAuteur');
+        addTaskButton.addEventListener('click', () => {
+            const authorText = authorInput.value;
+            if (authorText) {
+                const deleteButton = li.querySelector('.delete');
+                deleteButton.addEventListener('click', () => {
+                    listAuteur.removeChild(li);
+                });
+                const editButton = li.querySelector('.edit');
+                editButton.addEventListener('click', () => {
+                    authorInput.value = authorText;
+                    listAuteur.removeChild(li);
+                });
+            }
+        });
+        authorInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                addTaskButton.click();
+            }
+        });
+    </script>
 </body>
 </html>
