@@ -1,16 +1,29 @@
 const tasks = {
-    list: [],
+    list: [
+        {id:1, name:"Faire"},
+        {id:2, name:"Faire"},
+        {id:3, name:"Faire"},
+        {id:4, name:"Faire"},
+        {id:5, name:"Faire"},
+        {id:6, name:"Faire"},
+
+    ],
+    nextId: 1,
 
     displayTasks : function() {
-        const taskList = getElementById("taskList");
+        const task = {id: this.nextId++, name: name}
+        const taskList = document.getElementById("taskList");
         taskList.innerHTML = "";
 
         if(this.list.length === 0) {
             taskList.innerHTML = "<li>Aucune tâche dans la liste</li>";
         }else {
-            this.list.forEach((task, index) => {
+            this.list.forEach((task) => {
                 const li = document.createElement('li');
-                li.textContent = task;
+                li.innerHTML = `
+                <p>${task.name}</p>
+                <button data-id="${task.id}">Modifier</button>
+                `
                 taskList.appendChild(li)
             })
         }
@@ -18,7 +31,9 @@ const tasks = {
 }
 
 
-//Tableau qui contiendra les tasks
-const tableau = [];
 
-const elementList = document.querySelector(".list-item");
+let tasklist = document.createElement('ul');
+tasklist.id = "taskList";
+document.body.appendChild(tasklist);
+
+tasks.displayTasks();
